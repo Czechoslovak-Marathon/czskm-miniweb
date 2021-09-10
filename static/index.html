@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Czechoslovak Marathon - Minimarathon</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 0 auto;
+    }
+
+    p {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.4em;
+    }
+
+    th, td {
+      font-family: 'Libre Baskerville', serif;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav style="background-color: #1C3659; height: 200px; line-height: 0;">
+      <div class="nav-wrapper valign-wrapper">
+        <div class="container center-align">
+          <img src="logo.svg" width="20%">
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main style="display: flex; flex-flow: column; height: 100%;">
+    <div class="container z-depth-2" style="flex: 1 1 auto; padding: 0.5em 2em 0em 2em">
+      <p>Czechoslovak Minimarathon je speedrun marathon, který se koná každý měsíc po dobu 1–2 dnů a má předem dané téma. Tato témata jsou vždy určena hlasovnáním, o jejich výběru tedy můžete rozhodnout. Všechny hry na daném marathonu toto téma musí splňovat.</p>
+      <p>Hlasovat o tématech můžete <a href="https://forms.gle/EepdNuaNMkenLNhi9">zde</a>. Doporučit nová témata můžete <a href="https://forms.gle/W5ipqrpYsw5oN7R17">zde</a>.</p>
+      <table class="striped">
+        <thead>
+          <tr>
+            <th>Téma</th>
+            <th>Skóre</th>
+            <th>Počet runů</th>
+            <th>Celkové skóre</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{range .results}}
+          <tr>
+            {{range .}}
+              <td>{{ . }}</td>
+            {{end}}
+          </tr>
+        {{end}}
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>
