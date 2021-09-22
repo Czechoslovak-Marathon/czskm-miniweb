@@ -1,4 +1,4 @@
-module github.com/KawaiiWafu/czskm-miniweb
+module github.com/WafuRuns/czskm-miniweb
 
 go 1.16
 
